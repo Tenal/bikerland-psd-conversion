@@ -1,0 +1,644 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* ---------- SECTION: GLOBAL STYLES ---------- */
+
+body,
+p, 
+ul,
+h1,
+h2, 
+h3,
+button,
+a,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+	width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* font styling */
+body,
+input {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 13rem;
+    /* FONT SIZE IS NOT 13rem??? */
+    /* border: 1px solid red; */
+    margin-top: 30vh;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 2.9rem;
+    font-weight: 400;
+    /* add other things here, buttons etc? */
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* ---------- SECTION: HEADER ---------- */
+header {
+    background-image: url(./biker-land-assets/image-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    text-align: center;
+    color: #F2A11C;
+    padding: 20px;
+    /* border: 2px solid red; */
+}
+
+
+
+
+/* NAV LIST STARTS HERE */
+li {
+    display: inline-block;
+    margin: 0 20px;
+} 
+
+/*not EXACTLY centered... maybe change back to display inline-block */
+
+/* .nav-list {
+    border: 1px solid red;
+    width: 365px;
+    margin: 0 auto;
+}
+
+.nav-list li {
+    float: left;
+    margin: 0 20px;
+} */
+
+nav a {
+    color: white;
+}
+
+nav a:hover,
+nav a:focus {
+    border-bottom: 2px solid #F2A11C;
+}
+
+i.fa-bars,
+input[type=checkbox] {
+    color: white;
+    position: fixed;
+    right: 25px;
+    top: 20px;
+    font-size: 5rem;
+    display: none;
+    background: #1F2022;
+    /* height: 47px; */
+    border-radius: 10px;
+    z-index: 10;
+}
+/* NAV LIST ENDS HERE */
+
+
+
+.social-icons {
+    /* float: right; */
+    /* border: 1px solid blue; */
+    width: 40px;
+    font-size: 2.5rem;
+    margin: 0 0 0 auto;
+    position: relative;
+    bottom: 165px;
+    left: 20px;
+}
+
+.social-icons li {
+    display: block;
+    margin: 12px 0;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+    color: white
+}
+
+
+
+
+/* SECTION: ABOUT US */
+
+.about-us {
+    background-color: #F4F4F4;
+}
+
+.top-image {
+    background-image: url(./biker-land-assets/image-2.jpg);
+    /* object-fit: fill;
+    object-position: center;
+    image-size: cover; */
+}
+
+.bottom-image {
+    background-image: url(./biker-land-assets/image-7.jpg);
+}
+
+.top-image,
+.bottom-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.top-row {
+    float: right;
+    width: 50%;
+    height: 40vw;
+    position: relative;
+}
+
+.bottom-row {
+    float: left;
+    width: 50%;
+    height: 40vw;
+    position: relative;
+}
+
+.top-text {
+    padding-right: 80px;
+}
+
+.bottom-text {
+    padding-left: 80px;
+}
+
+.top-text,
+.bottom-text {
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    margin: auto;
+    height: 285px;
+    border:1px solid red; 
+}
+
+.read-more {
+    background-color: #1F2022;
+    color: #F2A11c;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 12px 25px;
+    border: 2px solid #1F2022;
+    margin-top: 20px;
+}
+
+.read-more {
+    display: inline-block;
+}
+
+.read-more:hover,
+.read-more:focus {
+    border-color: #F2A11c;
+}
+
+
+
+
+
+/* SECTION: MEET ALISSA */
+
+.meet-alissa {
+    padding: 100px 0;
+}
+
+.image-container {
+    float: left;
+    width: calc((100% - 40px) / 3);
+    margin-right: 40px;
+}
+
+.text-container {
+    float: left;
+    width: calc(((100% - 40px) / 3) * 2);
+}
+
+
+
+
+
+
+/* SECTION: PRODUCTS */
+
+.products {
+    background-image: url(./biker-land-assets/image-5.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 375px;
+    padding-top: 145px;
+    /* border: 1px solid yellow; */
+}
+
+.btn-list a {
+    color: #FFF;
+    font-size: 3rem;
+}
+
+.btn-list p {
+    color: #F2A11c;
+    font-weight: 700;
+    font-size: 2.3rem;
+    margin-top: 10px;
+}
+
+.btn-list a:hover p,
+.btn-list a:focus p {
+    color: #FFF;
+}
+
+.btn-list li:nth-of-type(2) {
+    margin: 0 40px;
+}
+
+
+
+
+/* SECTION: THE GRAM */
+
+.the-gram {
+    padding: 100px 0;
+    background-color: #F4F4F4;
+}
+
+.the-gram h2 {
+    text-align: center;
+    margin-bottom: 70px;
+    clear: both;
+}
+
+.the-gram li {
+    float: left;
+    margin: 0 30px 0 0;
+    width: calc((100% - 60px) / 3);
+}
+
+.the-gram li:nth-child(3n) {
+    margin-right: 0px;
+    /* remove margin right from 3rd images in gallery */
+}
+
+
+
+
+
+
+/* SECTION: FOOTER */
+
+h3 {
+    color: #F2A11c;
+    margin-bottom: 15px;
+}
+
+.contact {
+    padding: 100px 0;
+    color: #FFF;
+    background-color: #1F2022;
+}
+
+.contact nav {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.contact li:first-child {
+    margin-left: 0;
+}
+
+.contact li:last-child {
+    margin-right: 0;
+}
+
+.footer-container div {
+    float: left;
+    width: 50%;
+}
+
+/* form styling */
+form input {
+    float: left;
+}
+
+.footer-container input {
+    font-size: 1.5rem;
+    height: 40px;
+}
+
+.form-container p {
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+/* looks larger than it should be??? */
+}
+
+label {
+    font-size: 1.7rem;
+}
+
+input[type=submit] {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Catamaran', sans-serif;
+    cursor: pointer;
+    background-color: #F2A11C;
+    border: #F2A11C;
+    width: 25%;
+    padding: 7px 10px;
+    margin-top: 15px;
+}
+
+input[type=email] {
+    width: 75%;
+    border: none;
+    padding: 7px 25px;
+    margin-top: 15px;
+}
+
+input[type=email]::placeholder {
+    opacity: 0.9;
+    font-size: 1.5rem;
+    color: #1F2022;
+}
+
+/* copyright styling */
+.copyright {
+    text-align: center;
+    background-color: #000000;
+    height: 50px;
+    padding: 10px;
+    color: #4A4A4A;
+}
+
+.copyright p {
+    font-weight: 700;
+}
+
+.copyright a {
+    text-decoration: underline;
+    color: #4A4A4A;
+}
+
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* NOTE: change media query descriptions */
+
+/* Large Desktop & above */
+/* @media (max-width: 1440px) {
+    
+} */
+/* Large desktop to small desktop */
+/* @media (max-width: 1160px) {
+    
+} */
+
+
+/* Small desktops to portrait tablet */
+@media (max-width: 940px) {
+    /* SECTION: header */
+    .social-icons {
+        display: none;
+    }
+
+    /* SECTION: about us */
+
+    /* SECTION: meet alissa */
+
+    /* SECTION: products */
+
+    /* SECTION: the gram */
+
+    /* SECTION: footer */
+    form input {
+        float: none;
+    }
+
+    input[type=email]::placeholder {
+        text-align: center;
+    }
+
+    input[type=submit] {
+        margin-top: 10px;
+    }
+
+    input[type=email],
+    input[type=submit] {
+        width: 100%;
+    }
+}
+
+/* Portrait tablet to landscape phone */
+@media (max-width: 768px) {
+    /* SECTION: header */
+    header {
+        background-image: url(./biker-land-assets/image-1-mobile_2x.jpg);
+        height: 85vh;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    i.fa-bars,
+    input[type=checkbox] {
+        display: inherit;
+    }
+
+    input[type=checkbox]:checked + .nav-list {
+        display: block;
+    }
+
+    header nav {
+        position: fixed;
+        top: 75px;
+        right: 25px;
+        background-color: #1F2022;
+        border-radius: 10px;
+        z-index: 10;
+        padding: 20px;
+    }
+
+
+    /* .nav-list {
+        position: fixed;
+        right: -35%;
+        top: 0;
+        width: 35%;
+        background: rgb(0, 0, 0);
+        height: 100vh;
+        z-index: 10;
+        transition: all 0.6s ease;
+    }
+
+    .nav-list a {
+        color: white;
+        font-size: 3rem;
+        border-bottom: 1px solid grey;
+        display: block;
+        padding: 20px;
+    } */
+
+    /* input[type=checkbox] {
+        position: absolute;
+        left: -100000px;
+    } */
+
+    /* header nav li {
+        float: left;
+        clear:both;
+    } */
+
+
+
+
+
+
+
+
+
+    /* SECTION: about us */
+
+    /* SECTION: meet alissa */
+
+    /* SECTION: products */
+
+    /* SECTION: the gram */
+    .the-gram {
+        padding: 80px 0;
+    }
+
+    .the-gram h2 {
+        margin-bottom: 50px;
+    }
+
+    .the-gram li {
+        margin-right: 20px;
+        width: calc((100% - 20px) / 2);
+    }
+
+    .the-gram li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .the-gram li:nth-child(3n) {
+        display: none;
+    }
+
+    /* SECTION: footer */
+    .contact {
+        text-align: center;
+        padding: 80px 0;
+    }
+
+    .footer-container div {
+        float: none;
+        width: 100%;
+    }
+
+    .footer-container div:first-child {
+        margin-bottom: 40px;
+    }
+}
+
+/* Landscape phone & down */
+@media (max-width: 480px) {
+    /* SECTION: header */
+    header {
+        background-size: cover;
+        height: 65vh;
+        background-position: bottom;
+        /* not working??????????????????????????? */
+    }
+
+    h1 {
+        font-size: 5.5rem;
+        margin-top: 200px; 
+    }
+
+    /* SECTION: about us */
+
+    /* SECTION: meet alissa */
+
+    /* SECTION: products */
+
+    /* SECTION: the gram */
+    .the-gram {
+        padding: 50px 0;
+    }
+
+    /* SECTION: footer */
+    footer p,
+    footer li,
+    label {
+        font-size: 1.5rem;
+    }
+
+    .contact {
+        padding: 50px 0;
+    }
+
+    .contact li {
+        margin: 0 10px; 
+    }
+}
