@@ -540,9 +540,9 @@ input[type=email]::placeholder {
     }
 }
 
-/* Minor Breakpoint 1: icons section */
+/* Minor Breakpoint 1: to aid in a more fluid & responsive design */
 @media (max-width: 506px) {
-    /* about us section */
+    /* SECTION: about us */
     .top-text,
     .bottom-text {
         height: 285px;
@@ -613,19 +613,19 @@ input[type=email]::placeholder {
 
 /* Minor Breakpoint 2: very small phones */
 @media (max-width: 416px) {
-    /* header */
+    /* SECTION: header */
     h1 {
         font-size: 6rem;
         margin-top: 40vh; 
     }
 
-    /* about us */
+    /* SECTION: about us */
     .top-text,
     .bottom-text {
         height: 325px;
     }
 
-    /* footer */
+    /* SECTION: footer */
     footer li {
         font-size: 1.7rem;
     }
