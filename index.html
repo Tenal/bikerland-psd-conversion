@@ -11,44 +11,77 @@
 </head>
 
 <body>
-<!-- SECTION: HEADER -->
+<!------------ SECTION: HEADER ------------>
     <header>
         <div class="wrapper">
-            <label for="menu">
-                <i class="fa fa-bars"></i>
-                <span class="sr-only">Menu icon</span>
-            </label>
-            <input type="checkbox" id="menu">
-            <nav class="header-nav">
-                <ul class="clearfix">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <nav>
+                <label for="ham-menu">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Menu icon</span>
+                </label>
+                <input type="checkbox" id="ham-menu" name="ham-menu">
+                <ul class="header-menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li class="header-menu-social-icons">
+                        <a href="#">
+                            <i class="fab fa-instagram" title="Instagram"></i>
+                            <span class="sr-only">instagram symbol</span>
+                        </a>
+                    </li>
+                    <li class="header-menu-social-icons">
+                        <a href="#">
+                            <i class="fab fa-facebook-f" title="Facebook"></i>
+                            <span class="sr-only">facebook symbol</span>
+                        </a>
+                    </li>
+                    <li class="header-menu-social-icons">
+                        <a href="#"><i class="fab fa-snapchat-ghost" title="Snapchat"></i>
+                            <span class="sr-only">snapchat symbol</span>
+                        </a>
+                    </li>
+                    <li class="header-menu-social-icons">
+                        <a href="#">
+                            <i class="fab fa-twitter" title="Twitter"></i>
+                            <span class="sr-only">twitter symbol</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
+
             <h1>Bikerland</h1>
+
             <ul class="social-icons">
                 <li>
                     <a href="#">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram" title="Instagram"></i>
                         <span class="sr-only">instagram symbol</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f" title="Facebook"></i>
                         <span class="sr-only">facebook symbol</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#"><i class="fab fa-snapchat-ghost"></i>
+                    <a href="#"><i class="fab fa-snapchat-ghost" title="Snapchat"></i>
                         <span class="sr-only">snapchat symbol</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-twitter" title="Twitter"></i>
                         <span class="sr-only">twitter symbol</span>
                     </a>
                 </li>
@@ -57,7 +90,7 @@
     </header>
 
     <main>
-<!-- SECTION: ABOUT US -->
+<!------------ SECTION: ABOUT US ------------>
         <section class="about-us clearfix" id="about">
             <div class="top-row top-image"></div>
             <div class="wrapper">
@@ -69,7 +102,6 @@
                     </div>
                 </div>
             </div>
-            <!-- class="second-row" was on div below bc was going to use a 'clear: left;' -->
             <div class="bottom-row bottom-image"></div>
             <div class="wrapper">
                 <div class="bottom-row bottom-text-container"">
@@ -82,7 +114,7 @@
             </div>
         </section>
 
-<!-- SECTION: MEET ALISSA -->
+<!------------ SECTION: MEET ALISSA ------------>
         <section class="meet-alissa" id="blog">
             <div class="clearfix wrapper">
                 <div class="image-container">
@@ -96,7 +128,7 @@
             </div>
         </section>
 
-<!-- SECTION: ICONS -->
+<!------------ SECTION: ICONS ------------>
         <section class="icons">
             <div class="site-icons">
                 <ul>
@@ -125,7 +157,7 @@
             </div>
         </section>
 
-<!-- SECTION: THE GRAM -->
+<!------------ SECTION: THE GRAM ------------>
         <section class="the-gram">
             <div class="wrapper">
                 <h2>The Gram</h2>
@@ -144,7 +176,7 @@
         </section>
     </main>
 
-<!-- SECTION: FOOTER -->
+<!------------ SECTION: FOOTER ------------>
     <footer>
         <section class="contact" id="contact">
             <div class="wrapper">
@@ -175,7 +207,7 @@
             </div>
         </section>
         <div class="copyright">
-            <p>Copyright &#169 2019 <a href="https://junocollege.com/">HackerYou</a></p>
+            <p>Made by Tenal at <a href="https://junocollege.com/">Juno College</a></p>
         </div>
     </footer>
 </body>

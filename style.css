@@ -76,7 +76,6 @@ p {
 
 a {
     line-height: 2.9rem;
-    color: inherit;
 }
 
 /* global nav styling */
@@ -90,11 +89,11 @@ li {
     margin: 0 20px;
 } 
 
-nav li:first-child {
+nav li:nth-of-type(1) {
     margin-left: 0;
 }
 
-nav li:last-child {
+nav li:nth-of-type(4) {
     margin-right: 0;
 }
 
@@ -126,9 +125,9 @@ header {
     background-image: url(./biker-land-assets/image-1.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
     text-align: center;
     color: #F2A11C;
     padding: 40px 20px;
@@ -142,11 +141,16 @@ input[type=checkbox] {
     right: 30px;
     top: 20px;
     z-index: 10;
-    background-color: #1F2022;
+    text-shadow: 1px 2px 2px rgba(31,32,34,0.6);
     color: white;
     font-size: 5rem;
     border-radius: 5px;
     padding: 0 3px;
+    cursor: pointer;
+}
+
+.header-menu-social-icons {
+    display: none;
 }
 
 /* social icons styling */
@@ -205,11 +209,11 @@ input[type=checkbox] {
 }
 
 .top-text {
-    padding-right: 80px;
+    padding-right: 60px;
 }
 
 .bottom-text {
-    padding-left: 80px;
+    padding-left: 60px;
 }
 
 .top-text,
@@ -359,25 +363,17 @@ input[type=email]::placeholder {
 }
 
 .copyright a {
-    text-decoration: underline;
+    font-style: italic;
 }
 
-
 /* ------------------- MEDIA QUERIES ------------------- */
-/* Small desktops to portrait tablet */
+/* MAJOR BREAKPOINT 1: small desktop to portrait tablet */
 @media (max-width: 940px) {
-    /* SECTION: header */
-    .social-icons {
-        display: none;
-    }
-
     /* SECTION: about us */
     .top-row,
     .bottom-row {
         float: none;
         width: 100%;
-        height: 40vw;
-        position: relative;
     }
 
     .top-image,
@@ -389,13 +385,12 @@ input[type=email]::placeholder {
     .bottom-text {
         text-align: center;
         padding: 0;
-        height: 225px;
+        height: 240px;
     }
 
     .top-text-container,
     .bottom-text-container {
-        padding: 80px 0;
-        height: 385px;
+        height: 66vh;
     }
 
     /* SECTION: footer */
@@ -417,21 +412,19 @@ input[type=email]::placeholder {
     }
 }
 
-/* Portrait tablet to landscape phone */
+/* MAJOR BREAKPOINT 2: portrait tablet to landscape phone */
 @media (max-width: 768px) {
     /* SECTION: header */
     header {
         background-image: url(./biker-land-assets/image-1-mobile_2x.jpg);
-        /* height: 95vh; 
-        do you want ot keep this in because of issues with mobile 100vh??????? */
     }
 
     h1 {
-        font-size: 8.5rem;
+        font-size: 9.5rem;
         margin-top: 35vh;
     }
 
-    .header-nav {
+    .social-icons {
         display: none;
     }
 
@@ -439,49 +432,40 @@ input[type=email]::placeholder {
         display: inherit;
     }
 
-    .header-nav {
+    .header-menu {
         position: fixed;
-        top: 75px;
-        right: 30px;
-        background-color: #1F2022;
-        border-radius: 5px;
-        width: 130px;
         z-index: 10;
-        padding: 20px;
-        transition: all 0.6s ease;
-        /* transition not working????? */
+        background-color: rgb(244, 244, 244, 0.8);
+        height: 100vh;
+        width: 33vw;
+        top: 0;
+        left: -33vw;
+        transition: all 0.5s ease;color: black;
     }
 
-    input[type=checkbox]:checked + .header-nav {
+    .header-menu li,
+    .header-menu-social-icons {
         display: block;
+        border-bottom: 2px solid #1F2022;
+        margin: 0;
+        padding: 20px 0;
     }
 
-    .header-nav li {
-        display: block;
-        margin: 0 0 20px 0;
+    input[type=checkbox]:checked + .header-menu {
+        left: 0;
     }
 
-    .header-nav li:last-child {
-        margin-bottom: 0;
-    }
-
-    /* changing hover to active/focus for mobile users */
-    nav a:hover {
+    .header-menu li:focus-within a,
+    .header-menu a:hover,
+    .header-menu a:active {
+        color: #F2A11C;
         border-bottom: none;
-    }  
-
-    nav a:active {
-        border-bottom: 2px solid #F2A11C;
     }
 
     /* SECTION: about us */
     .top-image,
     .bottom-image {
         height: 33vh;
-    }
-
-    .read-more:hover{
-        border-color: #1F2022;
     }
 
     .read-more:active {
@@ -514,10 +498,6 @@ input[type=email]::placeholder {
     }
 
     /* SECTION: products */
-    .site-icons a:hover p {
-        color: #F2A11C;
-    }
-
     .site-icons a:active p {
         color: #FFF;
     }
@@ -560,15 +540,7 @@ input[type=email]::placeholder {
     }
 }
 
-/* minor break point for about us section */
-@media (max-width: 675px) {
-    .top-text,
-    .bottom-text {
-        height: 255px;
-    }
-}
-
-/* Minor breakpoint: changing links in 'products' section */
+/* Minor Breakpoint 1: icons section */
 @media (max-width: 506px) {
     /* about us section */
     .top-text,
@@ -576,14 +548,13 @@ input[type=email]::placeholder {
         height: 285px;
     }
 
-    /* icons section */
+    /* SECTION: icons */
     .icons{
         background-position: 70% 0%;
         height: 500px;
         padding: 62px 0;
     }
 
-    
     .site-icons li {
         display: block;
     }
@@ -597,7 +568,7 @@ input[type=email]::placeholder {
     }
 }
 
-/* Landscape phone & down */
+/* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
     /* SECTION: header */
     h1 {
@@ -621,19 +592,12 @@ input[type=email]::placeholder {
         padding: 50px 0;
     }
 
-    /* SECTION: products */
-
     /* SECTION: the gram */
     .the-gram {
         padding: 50px 0;
     }
 
     /* SECTION: footer */
-    footer p,
-    footer li {
-        font-size: 1.7rem;
-    }
-
     label {
         font-size: 1.5rem;
     }
@@ -647,11 +611,11 @@ input[type=email]::placeholder {
     }
 }
 
-/* minor breakpoint for about us */
+/* Minor Breakpoint 2: very small phones */
 @media (max-width: 416px) {
     /* header */
     h1 {
-        font-size: 5.5rem;
+        font-size: 6rem;
         margin-top: 40vh; 
     }
 
@@ -659,5 +623,10 @@ input[type=email]::placeholder {
     .top-text,
     .bottom-text {
         height: 325px;
+    }
+
+    /* footer */
+    footer li {
+        font-size: 1.7rem;
     }
 }
