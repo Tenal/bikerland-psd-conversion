@@ -58,25 +58,25 @@ h3 {
 
 h1 {
     font-size: 13rem;
-    /* FONT SIZE IS NOT 13rem??? */
-    /* border: 1px solid red; */
     margin-top: 30vh;
 }
 
 h2 {
     font-size: 4.2rem;
     margin-bottom: 20px;
+    color: #1F2022;
 }
 
 p {
     line-height: 2.9rem;
     font-weight: 400;
+    color: #1F2022;
     /* add other things here, buttons etc? */
 }
 
 .wrapper {
     max-width: 1200px;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -133,16 +133,15 @@ i.fa-bars,
 input[type=checkbox] {
     color: white;
     position: fixed;
-    right: 25px;
+    right: 30px;
     top: 20px;
     font-size: 5rem;
     display: none;
-    background: #1F2022;
-    /* height: 47px; */
-    border-radius: 10px;
     z-index: 10;
+    background-color: #1F2022;
+    border-radius: 5px;
+    padding: 0 3px;
 }
-/* NAV LIST ENDS HERE */
 
 
 
@@ -178,9 +177,6 @@ input[type=checkbox] {
 
 .top-image {
     background-image: url(./biker-land-assets/image-2.jpg);
-    /* object-fit: fill;
-    object-position: center;
-    image-size: cover; */
 }
 
 .bottom-image {
@@ -225,8 +221,7 @@ input[type=checkbox] {
     left: 0; 
     right: 0;
     margin: auto;
-    height: 285px;
-    border:1px solid red; 
+    height: 300px;
 }
 
 .read-more {
@@ -292,6 +287,10 @@ input[type=checkbox] {
     font-size: 3rem;
 }
 
+.btn-list i {
+    font-size: 4rem;
+}
+
 .btn-list p {
     color: #F2A11c;
     font-weight: 700;
@@ -355,7 +354,6 @@ h3 {
 
 .contact nav {
     text-align: center;
-    text-transform: uppercase;
     margin-bottom: 40px;
 }
 
@@ -370,6 +368,10 @@ h3 {
 .footer-container div {
     float: left;
     width: 50%;
+}
+
+.footer-container p {
+    color: white;
 }
 
 /* form styling */
@@ -396,6 +398,7 @@ input[type=submit] {
     text-transform: uppercase;
     font-weight: 700;
     font-family: 'Catamaran', sans-serif;
+    color: #1f2022;
     cursor: pointer;
     background-color: #F2A11C;
     border: #F2A11C;
@@ -418,21 +421,18 @@ input[type=email]::placeholder {
 }
 
 /* copyright styling */
-.copyright {
+.copyright p {
     text-align: center;
     background-color: #000000;
-    height: 50px;
+    height: 45px;
     padding: 10px;
-    color: #4A4A4A;
-}
-
-.copyright p {
-    font-weight: 700;
+    color: rgb(244, 244, 244, 0.5);
+    font-size: 1.5rem;
 }
 
 .copyright a {
     text-decoration: underline;
-    color: #4A4A4A;
+    color: rgb(244, 244, 244, 0.5);
 }
 
 
@@ -440,14 +440,11 @@ input[type=email]::placeholder {
 
 /* NOTE: change media query descriptions */
 
-/* Large Desktop & above */
-/* @media (max-width: 1440px) {
-    
-} */
-/* Large desktop to small desktop */
-/* @media (max-width: 1160px) {
-    
-} */
+
+
+
+
+
 
 
 /* Small desktops to portrait tablet */
@@ -458,12 +455,40 @@ input[type=email]::placeholder {
     }
 
     /* SECTION: about us */
+    .top-row,
+    .bottom-row {
+        float: none;
+        width: 100%;
+        height: 40vw;
+        position: relative;
+    }
+
+    .top-image,
+    .bottom-image {
+        height: 33vh;
+    }
+
+    .top-text,
+    .bottom-text {
+        text-align: center;
+        padding: 0;
+        height: 225px;
+    }
+
+    .top-text-container,
+    .bottom-text-container {
+        padding: 80px 0;
+        height: 385px;
+    }
+
+
 
     /* SECTION: meet alissa */
 
-    /* SECTION: products */
+    
 
-    /* SECTION: the gram */
+
+
 
     /* SECTION: footer */
     form input {
@@ -484,84 +509,118 @@ input[type=email]::placeholder {
     }
 }
 
+
+
+
+
+
 /* Portrait tablet to landscape phone */
 @media (max-width: 768px) {
     /* SECTION: header */
     header {
         background-image: url(./biker-land-assets/image-1-mobile_2x.jpg);
-        height: 85vh;
+        /* height: 95vh; 
+        do you want ot keep this in because of issues with mobile 100vh??????? */
     }
 
     h1 {
-        font-size: 8rem;
+        font-size: 8.5rem;
+        margin-top: 35vh;
     }
 
-    .nav-list {
+    .header-nav {
         display: none;
     }
 
-    i.fa-bars,
-    input[type=checkbox] {
+    i.fa-bars {
         display: inherit;
     }
 
-    input[type=checkbox]:checked + .nav-list {
-        display: block;
-    }
-
-    header nav {
+    .header-nav {
         position: fixed;
         top: 75px;
-        right: 25px;
+        right: 30px;
         background-color: #1F2022;
-        border-radius: 10px;
+        border-radius: 5px;
+        width: 130px;
         z-index: 10;
         padding: 20px;
-    }
-
-
-    /* .nav-list {
-        position: fixed;
-        right: -35%;
-        top: 0;
-        width: 35%;
-        background: rgb(0, 0, 0);
-        height: 100vh;
-        z-index: 10;
         transition: all 0.6s ease;
+        /* transition not working????? */
     }
 
-    .nav-list a {
-        color: white;
-        font-size: 3rem;
-        border-bottom: 1px solid grey;
+    input[type=checkbox]:checked + .header-nav {
         display: block;
-        padding: 20px;
-    } */
+    }
 
-    /* input[type=checkbox] {
-        position: absolute;
-        left: -100000px;
-    } */
+    .header-nav li {
+        display: block;
+        margin: 0 0 20px 0;
+    }
 
-    /* header nav li {
-        float: left;
-        clear:both;
-    } */
+    .header-nav li:last-child {
+        margin-bottom: 0;
+    }
 
+    /* changing hover to active/focus for mobile users */
+    nav a:hover {
+        border-bottom: none;
+    }  
 
-
-
-
-
-
-
+    nav a:active {
+        border-bottom: 2px solid #F2A11C;
+    }
 
     /* SECTION: about us */
+    .top-image,
+    .bottom-image {
+        height: 33vh;
+    }
+
+    .read-more:hover{
+        border-color: #1F2022;
+    }
+
+    .read-more:active {
+        border-color: #F2A11c;
+    }
 
     /* SECTION: meet alissa */
+    .meet-alissa {
+        padding: 80px 0;
+    }
+
+    .text-container {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .image-container,
+    .text-container {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .text-container p {
+        text-align: left;
+    }
+
+    .text-container .read-more {
+        padding: 12px 45px;
+    }
+
+
+
 
     /* SECTION: products */
+    .btn-list a:hover p {
+        color: #F2A11C;
+    }
+
+    .btn-list a:active p {
+        color: #FFF;
+    }
 
     /* SECTION: the gram */
     .the-gram {
@@ -601,24 +660,76 @@ input[type=email]::placeholder {
     }
 }
 
+
+
+
+/* minor break point for about us section */
+@media (max-width: 675px) {
+    .top-text,
+    .bottom-text {
+        height: 255px;
+    }
+}
+
+
+
+
+/* Minor breakpoint: changing links in 'products' section */
+@media (max-width: 506px) {
+    /* about us section */
+    .top-text,
+    .bottom-text {
+        height: 285px;
+    }
+
+
+    /* products section */
+    .products {
+        background-position: 70% 0%;
+        height: 500px;
+        padding: 62px 0;
+    }
+
+    
+    .btn-list li {
+        display: block;
+    }
+
+    .btn-list li p {
+        margin-top: 20px;
+    }
+
+    .btn-list li:nth-of-type(2) {
+        margin: 50px 0;
+    }
+}
+
+
+
 /* Landscape phone & down */
 @media (max-width: 480px) {
     /* SECTION: header */
-    header {
-        background-size: cover;
-        height: 65vh;
-        background-position: bottom;
-        /* not working??????????????????????????? */
-    }
-
     h1 {
-        font-size: 5.5rem;
-        margin-top: 200px; 
+        font-size: 7.5rem;
+        margin-top: 37vh; 
     }
 
     /* SECTION: about us */
+    .top-image,
+    .bottom-image {
+        height: 26vh;
+    }
+
+    .top-text-container,
+    .bottom-text-container {
+        padding: 50px 0;
+    }
+
 
     /* SECTION: meet alissa */
+    .meet-alissa {
+        padding: 50px 0;
+    }
 
     /* SECTION: products */
 
@@ -629,16 +740,35 @@ input[type=email]::placeholder {
 
     /* SECTION: footer */
     footer p,
-    footer li,
+    footer li {
+        font-size: 1.7rem;
+    }
+
     label {
         font-size: 1.5rem;
     }
+
 
     .contact {
         padding: 50px 0;
     }
 
     .contact li {
-        margin: 0 10px; 
+        margin: 0 16px; 
+    }
+}
+
+/* minor breakpoint for about us */
+@media (max-width: 416px) {
+    /* header */
+    h1 {
+        font-size: 5.5rem;
+        margin-top: 40vh; 
+    }
+
+    /* about us */
+    .top-text,
+    .bottom-text {
+        height: 325px;
     }
 }
