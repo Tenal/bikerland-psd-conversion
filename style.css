@@ -8,17 +8,13 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* ---------- SECTION: GLOBAL STYLES ---------- */
-
-body,
+/* ---------- GLOBAL STYLES ---------- */
+*,
 p, 
-ul,
 h1,
 h2, 
 h3,
-button,
-a,
-input {
+a {
     margin: 0;
     padding: 0;
 }
@@ -42,11 +38,18 @@ img {
     display: block;
 }
 
-/* font styling */
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* global font styling */
 body,
 input {
     font-family: 'Catamaran', sans-serif;
     font-size: 2rem;
+    color: #1F2022;
 }
 
 h1,
@@ -64,25 +67,31 @@ h1 {
 h2 {
     font-size: 4.2rem;
     margin-bottom: 20px;
-    color: #1F2022;
 }
 
 p {
     line-height: 2.9rem;
     font-weight: 400;
-    color: #1F2022;
-    /* add other things here, buttons etc? */
 }
 
-.wrapper {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
+a {
+    line-height: 2.9rem;
 }
 
+/* global nav styling */
+li {
+    display: inline-block;
+    margin: 0 20px;
+} 
 
+nav a {
+    color: white;
+}
 
-
+nav a:hover,
+nav a:focus {
+    border-bottom: 2px solid #F2A11C;
+}
 
 /* ---------- SECTION: HEADER ---------- */
 header {
@@ -94,66 +103,32 @@ header {
     height: 100vh;
     text-align: center;
     color: #F2A11C;
-    padding: 20px;
-    /* border: 2px solid red; */
+    padding: 40px 20px;
 }
 
-
-
-
-/* NAV LIST STARTS HERE */
-li {
-    display: inline-block;
-    margin: 0 20px;
-} 
-
-/*not EXACTLY centered... maybe change back to display inline-block */
-
-/* .nav-list {
-    border: 1px solid red;
-    width: 365px;
-    margin: 0 auto;
-}
-
-.nav-list li {
-    float: left;
-    margin: 0 20px;
-} */
-
-nav a {
-    color: white;
-}
-
-nav a:hover,
-nav a:focus {
-    border-bottom: 2px solid #F2A11C;
-}
-
+/* hamburger menu styling */
 i.fa-bars,
 input[type=checkbox] {
-    color: white;
+    display: none;
     position: fixed;
     right: 30px;
     top: 20px;
-    font-size: 5rem;
-    display: none;
     z-index: 10;
     background-color: #1F2022;
+    color: white;
+    font-size: 5rem;
     border-radius: 5px;
     padding: 0 3px;
 }
 
-
-
+/* social icons styling */
 .social-icons {
-    /* float: right; */
-    /* border: 1px solid blue; */
-    width: 40px;
-    font-size: 2.5rem;
-    margin: 0 0 0 auto;
     position: relative;
     bottom: 165px;
     left: 20px;
+    width: 40px;
+    font-size: 2.5rem;
+    margin: 0 0 0 auto;
 }
 
 .social-icons li {
@@ -166,11 +141,7 @@ input[type=checkbox] {
     color: white
 }
 
-
-
-
-/* SECTION: ABOUT US */
-
+/* ---------- SECTION: ABOUT US ---------- */
 .about-us {
     background-color: #F4F4F4;
 }
