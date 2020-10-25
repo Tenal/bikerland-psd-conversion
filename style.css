@@ -451,6 +451,12 @@ input[type=email]::placeholder {
         padding: 20px 0;
     }
 
+    .header-menu li:last-of-type {
+        border-bottom: none;
+        font-family: 'Pacifico', cursive;
+        padding-top: 42px;
+    }
+
     input[type=checkbox]:checked + .header-menu {
         left: 0;
     }
