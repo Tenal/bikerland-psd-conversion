@@ -33,7 +33,7 @@ a {
 }
 
 img {
-	width: 100%;
+	max-width: 100%;
     height: auto;
     display: block;
 }
@@ -79,6 +79,7 @@ a {
 }
 
 /* global nav styling */
+    /* NOTE to reviewer: one of the 'designers/instructors' informed me that using display inline-block for my navs was fine & I wouldn't lose any points as long as I was using floats for other sections of the site - so I hope this is okay :) */
 nav {
     color: white;
     text-align: center;
@@ -367,7 +368,7 @@ input[type=email]::placeholder {
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
-/* MAJOR BREAKPOINT 1: small desktop to portrait tablet */
+/* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
     /* SECTION: about us */
     .top-row,
@@ -412,7 +413,7 @@ input[type=email]::placeholder {
     }
 }
 
-/* MAJOR BREAKPOINT 2: portrait tablet to landscape phone */
+/* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
     /* SECTION: header */
     header {
